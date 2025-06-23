@@ -13,8 +13,13 @@ import {
 import Analytics from "./pages/Analytics";
 import Ecommarce from "./pages/Ecommarce";
 import Colors from "./pages/Colors";
-//import IconGallary from "./pages/IconGallery";
+
 import IconGallery from "./pages/IconGallery";
+import Typography from "./pages/Typography";
+import Button from "./pages/Button";
+import Notifications from "./pages/Notifications";
+import Modals from "./pages/Modals";
+// import { Button } from "react-bootstrap";
 
 const router = createBrowserRouter([
   {
@@ -37,9 +42,25 @@ const router = createBrowserRouter([
         path: "/Color",
         element: <Colors />,
       },
+       {
+        path: "/typography",
+        element: <Typography/>,
+      },
       {
         path: "/IconGallery",
         element: <IconGallery />,
+      },
+      {
+        path: "/Button",
+        element: <Button/>,
+      },
+      {
+        path: "/Notifications",
+        element: <Notifications/>,
+      },
+      {
+        path: "/Modals",
+        element: <Modals/>,
       },
     ],
   },

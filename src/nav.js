@@ -84,20 +84,20 @@ const menuItems = [
       },
 
       {
-        childtitle: "Buttons",
-        childlink: "student/registerStudent",
+        childtitle: "Button",
+        childlink: "./Button",
         childicon: IoIosRadioButtonOn,
       },
 
       {
         childtitle: "Notifications",
-        childlink: "student/registerStudent",
+        childlink: "./Notifications",
         childicon: IoIosNotifications,
       },
 
       {
         childtitle: "Modals",
-        childlink: "student/registerStudent",
+        childlink: "/Modals",
         childicon: SiModal,
       },
 
