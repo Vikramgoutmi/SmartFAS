@@ -50,12 +50,12 @@ const menuItems = [
       },
       {
         childtitle: "Sass Dashboard",
-        childlink: "student/registerStudent",
+        childlink: "./SaasDashboard",
         childicon: MdOutlineSpaceDashboard,
       },
       {
         childtitle: "Systems",
-        childlink: "student/view",
+        childlink: "./System",
         childicon: MdOutlineSystemSecurityUpdateGood,
       },
     ],
