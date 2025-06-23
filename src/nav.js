@@ -35,17 +35,17 @@ const menuItems = [
     child: [
       {
         childtitle: "Default",
-        childlink: "student/registerStudent",
+        childlink: "./",
         childicon: MdOutlineRestorePage,
       },
       {
         childtitle: "Analytics",
-        childlink: "student/view",
+        childlink: "./Analytics",
         childicon: IoAnalytics,
       },
       {
         childtitle: "E-commerce",
-        childlink: "student/assign-room",
+        childlink: "./Ecommarce",
         childicon: CiShop,
       },
       {
