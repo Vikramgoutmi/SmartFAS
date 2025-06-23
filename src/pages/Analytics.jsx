@@ -251,7 +251,7 @@ const Analytics = () => {
                   style={{ width: "100%", height: "150px" }}
                   />
               </div>
-                   <img src={imag} alt="" />
+                   {/* <img src={imag} alt="" /> */}
 
               {regionData.map((item, i) => (
                 <div key={i} className="d-flex justify-content-between mb-2">

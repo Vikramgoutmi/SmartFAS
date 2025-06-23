@@ -15,7 +15,7 @@ const Header = () => {
               className="me-2"
             />
           </a>
-          <h1>bjhsadb</h1>
+          <h1>Logo</h1>
           {/* Search Bar */}
           <form className="d-flex mx-auto w-50">
             <input
