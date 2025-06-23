@@ -1,15 +1,19 @@
 // import logo from "../assets/react.svg"
 import image from "../../public/image.png";
-const  Header = () => {
-  return (<>
-    
-
+const Header = () => {
+  return (
+    <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div className="container-fluid">
           {/* Logo */}
           <a className="navbar-brand" href="/">
-            <img src={image} alt="logo" width="30" height="30" className="me-2" />
-           
+            <img
+              src={image}
+              alt="logo"
+              width="30"
+              height="30"
+              className="me-2"
+            />
           </a>
           <h1>bjhsadb</h1>
           {/* Search Bar */}
@@ -69,11 +73,8 @@ const  Header = () => {
           </div>
         </div>
       </nav>
-      
-  </>
+    </>
+  );
+};
 
-  )
-}
-
-export default Header
-
+export default Header;
