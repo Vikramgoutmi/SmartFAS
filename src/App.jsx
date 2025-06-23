@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <DashboardCard />,
       },
       {
-        path: "/analytics",
+        path: "/Analytics",
         element: <Analytics/>,
       },
       {
