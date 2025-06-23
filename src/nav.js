@@ -78,7 +78,7 @@ const menuItems = [
       },
 
       {
-        childtitle: "Icons",
+        childtitle: "IconGallery",
         childlink: "./IconGallery",
         childicon: TbIconsFilled,
       },
