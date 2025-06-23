@@ -10,8 +10,10 @@ import DashboardCard from "./pages/DashboardCard";
 import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 import  Analytics  from "./pages/Analytics";
 import Ecommarce from "./pages/Ecommarce";
-import SassDashboard from "./pages/SaasDashboard";
-import Systems from "./pages/Systems";
+import Colors from "./pages/Colors";
+import Typography from "./pages/Typography";
+import IconGallery from "./pages/IconGallery";
+
 
 const router = createBrowserRouter([
   {
@@ -30,13 +32,9 @@ const router = createBrowserRouter([
         path: "/Ecommarce",
         element: <Ecommarce/>
       },
-      {
-        path: "/SaasDashboard",
-        element: <SassDashboard />
-      },
-      {
-        path: "/System",
-        element: <Systems/>
+        {
+        path: "/Color",
+        element: <Colors/>
       }
     ],
   },

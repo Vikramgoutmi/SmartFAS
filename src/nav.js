@@ -67,19 +67,19 @@ const menuItems = [
     child: [
       {
         childtitle: "Colors",
-        childlink: "student/registerStudent",
+        childlink: "./color",
         childicon: MdInvertColors,
       },
 
       {
-        childtitle: "Typograpy",
-        childlink: "student/registerStudent",
+        childtitle: "Typography",
+        childlink: "./typography",
         childicon: TbFileTypography,
       },
 
       {
         childtitle: "Icons",
-        childlink: "student/registerStudent",
+        childlink: "./IconGallery",
         childicon: TbIconsFilled,
       },
 

@@ -6,17 +6,17 @@ import { NavLink } from "react-router";
 function Navbar() {
   console.log(menuItems);
   return (
-    <Sidebar>
+    <Sidebar  >
       <Menu>
         {menuItems.map((curElem, index) => {
           const SideBarIcon = curElem.icon;
           console.log(SideBarIcon);
           return (
             <>
-              <SubMenu key={index} label={curElem.title} icon={<SideBarIcon />}>
+              <SubMenu  key={index} label={curElem.title} icon={<SideBarIcon />}>
                 {curElem.child &&
                   curElem.child.map((childItem, childIndex) => (
-                    <MenuItem key={childIndex}>
+                    <MenuItem cla key={childIndex}>
                       <NavLink
                         className={({ isActive }) =>
                           `nav-link ${
