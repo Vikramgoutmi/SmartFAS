@@ -1,6 +1,6 @@
 // import React from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
-// //import imag from "C:/Users/ab/OneDrive/Desktop/Finance/public/map_logo.png"
+// import imag from "C:/Users/ab/OneDrive/Desktop/Finance/public/map_logo.png"
 // import { Container, Row, Col, Card } from "react-bootstrap";
 // import {
 //   LineChart,
@@ -616,7 +616,7 @@ const Analytics = () => {
                   style={{ width: "100%", height: "150px" }}
                   />
               </div>
-                   {/* <img src={imag} alt="" /> */}
+                   {/* <img src={imag} /> */}
 
               {regionData.map((item, i) => (
                 <div key={i} className="d-flex justify-content-between mb-2">

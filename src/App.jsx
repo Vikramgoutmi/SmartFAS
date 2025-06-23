@@ -11,6 +11,11 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router
 import  Analytics  from "./pages/Analytics";
 import Ecommarce from "./pages/Ecommarce";
 
+import Color from "./pages/Colors ";
+import Typography from "./pages/Typography";
+import IconGallery from "./pages/IconGallery";
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,7 +32,20 @@ const router = createBrowserRouter([
       {
         path: "/Ecommarce",
         element: <Ecommarce/>
-      }
+      },
+       {
+        path: "/Color",
+        element: <Color/>
+      },
+        {
+        path: "/Typography",
+        element: <Typography/>
+      },
+
+        {
+        path: "/IconGallery",
+        element: <IconGallery/>
+      },
     ],
   },
 ]);
