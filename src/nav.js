@@ -103,7 +103,12 @@ const menuItems = [
 
       {
         childtitle: "Tabs & Accordion",
-        childlink: "student/registerStudent",
+        childlink: "/Tabs",
+        childicon: FaDatabase,
+      },
+            {
+        childtitle: "Progress",
+        childlink: "/Progress",
         childicon: FaDatabase,
       },
     ],
@@ -111,7 +116,7 @@ const menuItems = [
   {
     title: "Widgets",
     icon: FaDatabase,
-    link: "dashboard",
+    link: "/Widgets",
   },
   {
     title: "Forms",

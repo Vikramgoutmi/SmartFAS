@@ -13,17 +13,19 @@ import {
 import Analytics from "./pages/Analytics";
 import Ecommarce from "./pages/Ecommarce";
 import Colors from "./pages/Colors";
-<<<<<<< Updated upstream
-=======
+
 // import Typography from "./pages/Typography";
 // import IconGallery from "./pages/IconGallery";
->>>>>>> Stashed changes
+
 
 import IconGallery from "./pages/IconGallery";
 import Typography from "./pages/Typography";
 import Button from "./pages/Button";
 import Notifications from "./pages/Notifications";
 import Modals from "./pages/Modals";
+import  Tabs  from "./pages/Tabs";
+import Progress from "./pages/Progress";
+import Widgets from "./pages/Widgets";
 // import { Button } from "react-bootstrap";
 
 const router = createBrowserRouter([
@@ -66,6 +68,19 @@ const router = createBrowserRouter([
       {
         path: "/Modals",
         element: <Modals/>,
+      },
+        {
+        path: "/Tabs",
+        element: <Tabs/>,
+      },
+        {
+        path: "/Progress",
+        element: <Progress/>,
+      },
+
+       {
+        path: "/Widgets",
+        element: <Widgets/>,
       },
     ],
   },
