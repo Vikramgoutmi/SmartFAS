@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Container, Row, Col, Card, ProgressBar } from "react-bootstrap";
 const Button = () => {
   return (
-   <div className='row g-3'>
-    <div className="container  ">
+   <Row className="g-4">
+    <Col md={6}>
       {/* Buttons */}
-      <div className="card  ">
+       <div className="card mb-4 ">
         <div className="card-body">
           <h5 className="card-title">Buttons</h5>
           <p className="card-text">
@@ -22,9 +22,13 @@ const Button = () => {
           <button className="btn btn-dark m-1">Dark</button>
           <button className="btn btn-link m-1">Link</button>
         </div>
-      </div>
+     </div>
+      </Col>
+
+ 
 
       {/* Outline Buttons */}
+      <Col md={6}>
       <div className="card mb-4">
         <div className="card-body">
           <h5 className="card-title">Outline buttons</h5>
@@ -42,9 +46,11 @@ const Button = () => {
           <button className="btn btn-link m-1">Link</button>
         </div>
       </div>
+      </Col>
      
 
       {/* Button Sizes */}
+       <Col md={6}>
       <div className="card mb-4">
         <div className="card-body">
           <h5 className="card-title">Buttons sizes</h5>
@@ -56,8 +62,10 @@ const Button = () => {
           <button className="btn btn-secondary btn-sm m-1">Small Button</button>
         </div>
       </div>
+      </Col>
 
       {/* Button States */}
+       <Col md={6}>
       <div className="card mb-4">
         <div className="card-body">
           <h5 className="card-title">Buttons State</h5>
@@ -68,9 +76,10 @@ const Button = () => {
           <button className="btn btn-outline-primary m-1" disabled>Disabled</button>
         </div>
       </div>
+      </Col>
     
- </div>
- </div> );
+ 
+ </Row> );
 };
 
 export default Button;
