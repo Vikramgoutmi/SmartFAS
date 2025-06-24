@@ -116,7 +116,13 @@ const menuItems = [
   {
     title: "Widgets",
     icon: FaDatabase,
-    link: "/Widgets",
+    // link: "/Widgets",
+     child: [
+      {
+        childtitle: "Widgets",
+        childlink: "./Widgets",
+        childicon: MdInvertColors,
+      },]
   },
   {
     title: "Forms",

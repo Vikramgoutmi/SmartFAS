@@ -23,6 +23,7 @@ function Navbar() {
                             isActive ? "text-primary fw-bold" : "text-dark"
                           }`
                         }
+                        
                         to={childItem.childlink}
                       >
                         {childItem.childtitle}
