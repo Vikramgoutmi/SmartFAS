@@ -13,6 +13,11 @@ import {
 import Analytics from "./pages/Analytics";
 import Ecommarce from "./pages/Ecommarce";
 import Colors from "./pages/Colors";
+<<<<<<< Updated upstream
+=======
+// import Typography from "./pages/Typography";
+// import IconGallery from "./pages/IconGallery";
+>>>>>>> Stashed changes
 
 import IconGallery from "./pages/IconGallery";
 import Typography from "./pages/Typography";
