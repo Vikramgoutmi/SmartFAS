@@ -1,12 +1,21 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Card, ProgressBar } from "react-bootstrap";
+import { Container, Row, Col, Card, ProgressBar, Image } from "react-bootstrap";
 import { FaClipboardCheck, FaShoppingCart, FaFilter, FaChartLine } from "react-icons/fa";
 import { Dropdown } from "react-bootstrap";
 import { ThreeDotsVertical } from "react-bootstrap-icons";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { PieChart, Pie, Cell, ResponsiveContainer, LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
+
 import "react-circular-progressbar/dist/styles.css";
+
+import {
+  Radar, RadarChart, PolarGrid,
+  PolarAngleAxis, PolarRadiusAxis
+} from "recharts";
+
+
+
 
 
 
@@ -92,6 +101,29 @@ const stats = [
     { country: "Italy", value: 67, change: "+1.6%" },
     { country: "Spain", value: 186, change: "+118%" },
   ];
+
+  const percentage = 86;
+
+  const newdata = [
+  { subject: "01", A: 80, B: 60, C: 40 },
+  { subject: "02", A: 90, B: 70, C: 50 },
+  { subject: "03", A: 60, B: 110, C: 70 },
+  { subject: "04", A: 50, B: 80, C: 90 },
+  { subject: "05", A: 95, B: 40, C: 50 },
+  { subject: "06", A: 70, B: 85, C: 30 },
+];
+
+const strong = [
+  { name: "Desktop", value: 1086 },
+  { name: "Tablet", value: 175 },
+  { name: "Mobile", value: 126 },
+];
+
+ const NEWCOLORS = ["#007bff", "#28c76f", "#6f42c1"]; // Blue, Green, Purple
+
+
+ 
+
 
 
   return (<>
@@ -330,7 +362,7 @@ const stats = [
                   fill="#8884d8"
                 >
                   {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell key={`cell-${index}`} fill={NEWCOLORS[index % NEWCOLORS.length]} />
                   ))}
                 </Pie>
               </PieChart>
@@ -526,9 +558,207 @@ const stats = [
     </Card>
     </Col>
 
+<Col className="container mt-4">
+ <Card className="card shadow-sm p-4 h-100 ">
+      <div className="row">
+        <div className="col-7">
+          <h6 className="text-muted">EARNING</h6>
+          <h3 className="fw-bold text-dark">$2,562</h3>
+          <p className="text-muted small">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+        <div className="col-5 d-flex align-items-center justify-content-center">
+          <div style={{ width: 60, height: 60 }}>
+            <CircularProgressbar
+              value={percentage}
+              text={`${percentage}`}
+              styles={buildStyles({
+                pathColor: "#007bff",
+                textColor: "#333",
+                trailColor: "#f0f0f0",
+                textSize: "24px",
+              })}
+            />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div className="row text-center">
+        <div className="col">
+          <div className="fw-bold">108</div>
+          <div className="text-muted small">Cost</div>
+          <div className="text-primary small">37.7% Last week</div>
+        </div>
+        <div className="col">
+          <div className="fw-bold">1168</div>
+          <div className="text-muted small">Revenue</div>
+          <div className="text-danger small">-18.9% Last week</div>
+        </div>
+      </div>
+    </Card>
+    </Col>
+
+<Col className="container mt-4">
+ <Card className="card shadow-sm p-3 ">
+      <h6 className="mb-3">Browsers</h6>
+      <div className="d-flex justify-content-center">
+        <RadarChart outerRadius={90} width={250} height={200} data={newdata}>
+          <PolarGrid />
+          <PolarAngleAxis dataKey="subject" />
+          <PolarRadiusAxis angle={30} domain={[0, 120]} />
+          <Radar name="Chrome" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+          <Radar name="Firefox" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+          <Radar name="Edge" dataKey="C" stroke="#ffc658" fill="#ffc658" fillOpacity={0.6} />
+        </RadarChart>
+      </div>
+      <div className="row text-center mt-3">
+        {[
+          { name: "Safari", value: 118, change: "+10%" },
+          { name: "Chrome", value: 1008, change: "+36%" },
+          { name: "Opera", value: 67, change: "+1.6%" },
+          { name: "Edge", value: 186, change: "+118%" },
+        ].map((browser, idx) => (
+          <div className="col-6 mb-3" key={idx}>
+            <div className="fw-bold">{browser.name}</div>
+            <div className="text-primary">{browser.value}</div>
+            <div className="text-muted small">{browser.change}</div>
+            <div className="progress" style={{ height: "4px" }}>
+              <div
+                className="progress-bar bg-primary"
+                role="progressbar"
+                style={{ width: `${Math.min(browser.value / 10, 100)}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Card>
+</Col>
+
+<Col className="container mt-4">
+  <Card className="p-3 shadow-sm sm-3 h-100">
+      <h5>Devices</h5>
+      <PieChart width={220} height={220}>
+       
+        <Pie
+          data={strong}
+          cx="50%"
+          cy="50%"
+          innerRadius={50}
+          outerRadius={80}
+          fill="#8884d8"
+          dataKey="value"
+          label={({ percent }) => `${(percent * 100).toFixed(1)}%`}
+        >
+          {strong.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index]} />
+          ))}
+        </Pie>
+        
+        <Tooltip />
+      </PieChart>
+
+      <div className="d-flex justify-content-around mt-3">
+        <div className="text-center">
+          <i className="bi bi-display" style={{ fontSize: "1.5rem" }}></i>
+          <div><strong>1086</strong></div>
+          <small className="text-success">+68%</small>
+        </div>
+        <div className="text-center">
+          <i className="bi bi-tablet" style={{ fontSize: "1.5rem" }}></i>
+          <div><strong>175</strong></div>
+          <small className="text-success">+18%</small>
+        </div>
+        <div className="text-center">
+          <i className="bi bi-phone" style={{ fontSize: "1.5rem" }}></i>
+          <div><strong>126</strong></div>
+          <small className="text-danger">-8%</small>
+        </div>
+      </div>
+    </Card>
+</Col>
+
+    
 
     
       </Row>
+
+        <Container className="mt-5">
+      <h5>Timeline & Activity</h5>
+      <p className="text-muted">
+        This primitive is meant to make it easy to display both user-centric or activity-centric actions in your app.
+      </p>
+      <Row>
+        {/* Recent Activity */}
+        <Col md={6}>
+          <Card className="mb-3">
+            <Card.Header className="d-flex justify-content-between">
+              <span>Recent Activity</span>
+              <a href="#">View all</a>
+            </Card.Header>
+            <Card.Body>
+              <div className="d-flex mb-3 ">
+                <Image src="https://i.pravatar.cc/40?img=1" roundedCircle className="me-3" style={{height:"70px", width:"70px"}} />
+                <div>
+                  <strong>Brown, Asher</strong>
+                  <div className="text-muted small">Just create new layout Index, form, table</div>
+                  <div className="text-muted small">1h ago</div>
+                </div>
+              </div>
+              <div className="d-flex mb-3">
+                <Image src="https://i.pravatar.cc/40?img=2" roundedCircle className="me-3" style={{height:"70px", width:"70px"}} />
+                <div>
+                  <strong>Hester, Nissim</strong>
+                  <div className="text-muted small">Fusce dapibus, tellus ac cursus commodo</div>
+                  <div className="text-muted small">2h ago</div>
+                </div>
+              </div>
+              <div className="d-flex">
+                <Image src="https://i.pravatar.cc/40?img=3" roundedCircle className="me-3" style={{height:"70px", width:"70px"}} />
+                <div>
+                  <strong>Kelley, Sonya</strong>
+                  <div className="text-muted small">Created new layout for widgets</div>
+                  <div className="text-muted small">4h ago</div>
+                </div>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        {/* Recent Orders */}
+        <Col md={6}>
+          <Card>
+            <Card.Header className="d-flex justify-content-between">
+              <span>Recent Orders</span>
+              <a href="#">View all</a>
+            </Card.Header>
+            <Card.Body>
+              <div className="mb-4">
+                <strong>Fusion Backpack</strong>
+                <div className="text-muted small">Gear, Bags</div>
+                <ProgressBar now={85} label={`+85%`} className="mt-1" />
+              </div>
+              <div className="mb-4">
+                <strong>Luma hoodies</strong>
+                <div className="text-muted small">Jackets, Men</div>
+                <ProgressBar now={75} label={`+75%`} className="mt-1" />
+              </div>
+              <div className="mb-4">
+                <strong>Luma shorts</strong>
+                <div className="text-muted small">Shorts, Men</div>
+                <ProgressBar now={62} label={`+62%`} className="mt-1" />
+              </div>
+              <div>
+                <strong>Brown Trousers</strong>
+                <div className="text-muted small">Trousers, Women</div>
+                <ProgressBar now={24} label={`+24%`} className="mt-1" />
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
     </div>
  </> );
 };

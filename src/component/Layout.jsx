@@ -2,52 +2,34 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 
 const Layout = () => {
   return (<>
-    <div className="d-flex flex-column w-100  bg-light ">
-      {/* Top header */}
-      <Header  />
-       </div>
+   <div className="d-flex flex-column vh-100 w-100 bg-light">
+  {/* Header - fixed at top */}
+  <div className="flex-shrink-0">
+    {/* <Header /> */}
+  </div>
 
-      <div className="d-flex    ">
-        {/* Sidebar */}
-        <div>
+  <div className="d-flex flex-grow-1 overflow-hidden">
+    {/* Sidebar with independent scrollbar */}
+    <div className="position-relative overflow-auto bg-white z-2" style={{ width: '260px' }}>
+      <Navbar />
+    </div>
 
-        <Navbar />
-        </div>
+    {/* Main content area with independent scrollbar */}
+    <main className="flex-grow-1 p-3 overflow-auto w-75">
+      <Header/>
+      <Outlet />
+    </main>
+  </div>
+</div>
 
-        {/* Main Content */}
-        <main className="flex-grow-1 p-3" style={{ width: "100%" }}>
-          <Outlet />
-        </main>
-      </div>
 
-      {/* Footer */}
-      <Footer />
+    
    
  </> );
 };
 
 export default Layout;
-
-
-
-// <div className="d-flex flex-column min-vh-100 bg-light ">
-//       {/* Top header */}
-//       <Header  />
-
-//       <div className="d-flex flex-grow-1 ">
-//         {/* Sidebar */}
-//         <Navbar />
-
-//         {/* Main Content */}
-//         <main className="flex-grow-1 p-3" style={{ width: "100%" }}>
-//           <Outlet />
-//         </main>
-//       </div>
-
-//       {/* Footer */}
-//       <Footer />
-//     </div>
