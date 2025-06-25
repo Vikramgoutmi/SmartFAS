@@ -126,7 +126,6 @@ const DashboardCard = () => {
             <h4>
               26 <span className="text-success">+20%</span>
             </h4>
-            <h1></h1>
           </Col>
           <Col>
             <h6 className="text-muted">Conversion</h6>
