@@ -8,6 +8,7 @@ import DashboardCard from "./pages/DashboardCard";
 import {
   BrowserRouter,
   createBrowserRouter,
+  
   RouterProvider,
 } from "react-router-dom";
 import Analytics from "./pages/Analytics";
@@ -26,7 +27,9 @@ import Modals from "./pages/Modals";
 import  Tabs  from "./pages/Tabs";
 import Progress from "./pages/Progress";
 import Widgets from "./pages/Widgets";
-// import { Button } from "react-bootstrap";
+import BasicElements from "./pages/BasicElements";
+import AdvancedElements from "./pages/AdvancedElements";
+
 
 const router = createBrowserRouter([
   {
@@ -81,6 +84,14 @@ const router = createBrowserRouter([
        {
         path: "/Widgets",
         element: <Widgets/>,
+      },
+       {
+        path: "/BasicElements",
+        element: <BasicElements/>,
+      },
+       {
+        path: "/AdvancedElements",
+        element: <AdvancedElements/>,
       },
     ],
   },

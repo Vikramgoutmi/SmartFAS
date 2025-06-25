@@ -1,7 +1,23 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Card, ProgressBar } from "react-bootstrap";
-const Button = () => {
+// import { Container, Row, Col, Card, ProgressBar } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+} from "react-bootstrap";
+import {
+  FaArrowRight,
+  FaChevronDown,
+  FaDownload,
+  FaRedoAlt,
+} from "react-icons/fa";
+
+const NewButton = () => {
   return (
    <Row className="g-4">
     <Col md={6}>
@@ -78,8 +94,121 @@ const Button = () => {
       </div>
       </Col>
     
+
+
+    <Col md={6}>
+        <Card>
+          <Card.Header>Button group</Card.Header>
+          <Card.Body>
+            <p className="text-muted">
+              Bootstrap includes several predefined button styles, each serving
+              its own semantic purpose, with a few extras thrown in for more
+              control.
+            </p>
+            <ButtonGroup>
+              <Button variant="secondary">Left</Button>
+              <Button variant="secondary">Middle</Button>
+              <Button variant="secondary">Right</Button>
+            </ButtonGroup>
+          </Card.Body>
+        </Card>
+      </Col>
+
+
+       <Col md={6}>
+        <Card>
+          <Card.Header>Button toolbar</Card.Header>
+          <Card.Body>
+            <p className="text-muted">
+              Bootstrap includes several predefined button styles, each serving
+              its own semantic purpose, with a few extras thrown in for more
+              control.
+            </p>
+
+            <ButtonToolbar className="mb-2">
+              <ButtonGroup className="me-2">
+                {[1, 2, 3, 4].map((n) => (
+                  <Button key={n} variant="secondary">
+                    {n}
+                  </Button>
+                ))}
+              </ButtonGroup>
+
+              <ButtonGroup className="me-2">
+                {[5, 6, 7].map((n) => (
+                  <Button key={n} variant="secondary">
+                    {n}
+                  </Button>
+                ))}
+              </ButtonGroup>
+
+              <ButtonGroup>
+                <Button variant="secondary">8</Button>
+              </ButtonGroup>
+            </ButtonToolbar>
+          </Card.Body>
+        </Card>
+      </Col>
+
+
+       <Col md={6}>
+        <Card>
+          <Card.Header>Icon buttons</Card.Header>
+          <Card.Body>
+            <p className="text-muted">
+              Bootstrap includes several predefined button styles, each serving
+              its own semantic purpose, with a few extras thrown in for more
+              control.
+            </p>
+
+            {/* solid */}
+            <Button variant="primary" className="me-2 mb-2">
+              <FaArrowRight className="me-1" /> Primary
+            </Button>
+            <Button variant="success" className="me-2 mb-2">
+              Success <FaChevronDown className="ms-1" />
+            </Button>
+            <Button variant="secondary" className="me-2 mb-2">
+              <FaDownload />
+            </Button>
+            <br />
+
+            {/* outline */}
+            <Button variant="outline-primary" className="me-2 mb-2">
+              <FaArrowRight className="me-1" /> Primary
+            </Button>
+            <Button variant="outline-secondary" className="me-2 mb-2">
+              <FaChevronDown className="me-1" /> Secondary
+            </Button>
+            <Button variant="outline-success" className="me-2 mb-2">
+              <FaRedoAlt />
+            </Button>
+          </Card.Body>
+        </Card>
+      </Col>
+
+<Col md={6}>
+        <Card>
+          <Card.Header>Block level buttons</Card.Header>
+          <Card.Body>
+            <p className="text-muted">
+              Bootstrap includes several predefined button styles, each serving
+              its own semantic purpose, with a few extras thrown in for more
+              control.
+            </p>
+
+            <Button variant="primary" size="lg" className="w-100 mb-3">
+              Block level button
+            </Button>
+            <Button variant="secondary" size="lg" className="w-100">
+              Block level button
+            </Button>
+          </Card.Body>
+        </Card>
+      </Col>
+
  
  </Row> );
 };
 
-export default Button;
+export default NewButton;
