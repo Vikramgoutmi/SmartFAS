@@ -85,7 +85,7 @@ const menuItems = [
 
       {
         childtitle: "Button",
-        childlink: "./Button",
+        childlink: "./NewButton",
         childicon: IoIosRadioButtonOn,
       },
 
@@ -131,12 +131,12 @@ const menuItems = [
     child: [
       {
         childtitle: "Basic Elements",
-        childlink: "student/registerStudent",
+        childlink: "./BasicElements",
         childicon: FaDatabase,
       },
       {
         childtitle: "Advanced Elements",
-        childlink: "student/view",
+        childlink: "./AdvancedElements",
         childicon: FaDatabase,
       },
       {
