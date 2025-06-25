@@ -22,7 +22,7 @@ import IconGallery from "./pages/IconGallery";
 import Typography from "./pages/Typography";
 import Button from "./pages/Button";
 import Notifications from "./pages/Notifications";
-import Modals from "./pages/Modals";
+import Modals from "./pages/Modals"; 
 import  Tabs  from "./pages/Tabs";
 import Progress from "./pages/Progress";
 import Widgets from "./pages/Widgets";
