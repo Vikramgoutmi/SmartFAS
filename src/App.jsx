@@ -21,7 +21,7 @@ import Colors from "./pages/Colors";
 
 import IconGallery from "./pages/IconGallery";
 import Typography from "./pages/Typography";
-import Button from "./pages/Button";
+import NewButton from "./pages/NewButton";
 import Notifications from "./pages/Notifications";
 import Modals from "./pages/Modals"; 
 import  Tabs  from "./pages/Tabs";
@@ -29,6 +29,8 @@ import Progress from "./pages/Progress";
 import Widgets from "./pages/Widgets";
 import BasicElements from "./pages/BasicElements";
 import AdvancedElements from "./pages/AdvancedElements";
+import Validation from "./pages/Validation";
+import FormWizard from "./pages/FormWizard";
 
 
 const router = createBrowserRouter([
@@ -61,8 +63,8 @@ const router = createBrowserRouter([
         element: <IconGallery />,
       },
       {
-        path: "/Button",
-        element: <Button/>,
+        path: "/NewButton",
+        element: <NewButton/>,
       },
       {
         path: "/Notifications",
@@ -92,6 +94,14 @@ const router = createBrowserRouter([
        {
         path: "/AdvancedElements",
         element: <AdvancedElements/>,
+      },
+       {
+        path: "/Validation",
+        element: <Validation/>,
+      },
+        {
+        path: "/FormWizard",
+        element: <FormWizard/>,
       },
     ],
   },

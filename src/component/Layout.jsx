@@ -19,7 +19,7 @@ const Layout = () => {
     </div>
 
     {/* Main content area with independent scrollbar */}
-    <main className="flex-grow-1 p-3 overflow-auto w-75">
+    <main className="flex-grow-1 p-3 overflow-auto w-75"> 
       <Header/>
       <Outlet />
     </main>

@@ -141,12 +141,12 @@ const menuItems = [
       },
       {
         childtitle: "Validation",
-        childlink: "student/assign-room",
+        childlink: "./Validation",
         childicon: FaDatabase,
       },
       {
         childtitle: "Wizard",
-        childlink: "student/checkin-checkout",
+        childlink: "./FormWizard",
         childicon: FaDatabase,
       },
       {
